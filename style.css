@@ -1,0 +1,263 @@
+/* style.css */
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    background-color: #f8f9fa;
+    color: #333;
+}
+
+header {
+    background: linear-gradient(135deg, #7995f0, #45478a);
+    color: white;
+    padding: 20px;
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.profile-pic {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 15px;
+    border: 4px solid white;
+}
+
+img {
+    width: 100%;
+    max-width: 400px;
+    border-radius: 10px;
+    margin-top: 10px;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+img:hover {
+    cursor: pointer;
+}
+
+nav {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s;
+    padding: 5px 10px;
+}
+
+nav a:hover {
+    color: #ffeb3b;
+}
+
+#projects, #certifications, #achievements {
+    margin: 20px auto;
+    padding: 20px;
+    background: white;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    width: 90%;
+    max-width: 1100px;
+    border-radius: 15px;
+    box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.project, .certification, .achievement {
+    padding: 20px;
+    border-radius: 10px;
+    background: linear-gradient(135deg, #f8f9fa, #e3e7fd);
+    transition: transform 0.3s;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.project:hover, .certification:hover, .achievement:hover {
+    transform: scale(1.05);
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+#contact {
+    margin: 50px auto;
+    padding: 40px;
+    background: white;
+    width: 90%;
+    max-width: 800px;
+    border-radius: 15px;
+    box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+#contact h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: #6e8efb;
+}
+
+#contactForm {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#contactForm input, #contactForm textarea {
+    width: 90%;
+    padding: 12px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 1rem;
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+#contactForm input:focus, #contactForm textarea:focus {
+    border-color: #6e8efb;
+    outline: none;
+    box-shadow: 0px 0px 8px rgba(110, 142, 251, 0.5);
+}
+
+#contactForm textarea {
+    height: 150px;
+    resize: vertical;
+}
+
+#contactForm button {
+    background-color: #6e8efb;
+    color: white;
+    padding: 12px 30px;
+    font-size: 1rem;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+    margin-top: 20px;
+}
+
+#contactForm button:hover {
+    background-color: #a777e3;
+    transform: translateY(-2px);
+}
+
+#formMessage {
+    font-weight: bold;
+    margin-top: 20px;
+    color: #6e8efb;
+}
+
+/* Responsive Design Adjustments */
+@media (max-width: 768px) {
+    header {
+        padding: 15px;
+        font-size: 1rem;
+    }
+
+    .profile-pic {
+        width: 100px;
+        height: 100px;
+    }
+
+    nav a {
+        font-size: 0.9rem;
+    }
+
+    #projects, #certifications, #achievements {
+        grid-template-columns: 1fr;
+        padding: 15px;
+    }
+
+    .project, .certification, .achievement {
+        padding: 15px;
+    }
+
+    h2 {
+        font-size: 1.5rem;
+    }
+
+    #contact {
+        padding: 20px;
+    }
+
+    #contact h2 {
+        font-size: 1.8rem;
+    }
+}
+
+@media (max-width: 480px) {
+    header {
+        padding: 10px;
+        font-size: 0.9rem;
+    }
+
+    .profile-pic {
+        width: 80px;
+        height: 80px;
+    }
+
+    nav a {
+        font-size: 0.8rem;
+        padding: 5px;
+    }
+
+    #projects, #certifications, #achievements {
+        padding: 10px;
+    }
+
+    .project, .certification, .achievement {
+        padding: 10px;
+    }
+
+    h2 {
+        font-size: 1.2rem;
+    }
+
+    #contact {
+        padding: 15px;
+    }
+
+    #contact h2 {
+        font-size: 1.5rem;
+    }
+
+    #contactForm input, #contactForm textarea {
+        font-size: 0.9rem;
+    }
+
+    #contactForm button {
+        font-size: 0.9rem;
+        padding: 10px 20px;
+    }
+}
+
+
+#contactForm input, #contactForm textarea {
+    width: 90%;
+    padding: 12px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 1rem;
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+#contactForm input.error, #contactForm textarea.error {
+    border-color: red !important;
+    background-color: #ffe6e6 !important;
+}
+
+#formMessage {
+    font-weight: bold;
+    margin-top: 20px;
+    color: red;
+    display: none; /* Hidden by default */
+}
+
+#formMessage.success {
+    color: green;
+}
